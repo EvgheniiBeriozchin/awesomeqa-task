@@ -1,5 +1,4 @@
 import * as React from "react";
-import { NextPage } from "next";
 import { Avatar, IconButton, List, ListItem, ListItemAvatar, ListItemText } from "@mui/material";
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
@@ -14,7 +13,7 @@ const cutText = (text: string, maxLength: number) =>
     return text.slice(0, maxLength) + '...';
 } 
 
-const TicketList: NextPage = (props: {tickets: TicketData[], onOpenTicket: any}) => {
+const TicketList = (props: {tickets: TicketData[], onOpenTicket: any}) => {
     return <List>
         {props.tickets.map((ticket, index) =>
         <ListItem

@@ -1,11 +1,10 @@
 import * as React from "react";
-import { NextPage } from "next";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { Button, Icon } from "@mui/material";
 import { ReactNode } from "react";
 
-const HomeButton: NextPage = (props: {icon: ReactNode, text: string, href: string}) => {
+const HomeButton = (props: {icon: ReactNode, text: string, href: string}) => {
 
   return (
       <Button

@@ -1,12 +1,11 @@
 import * as React from "react";
-import { NextPage } from "next";
 import { Avatar, Box, Button, Card, CardActions, CardContent, CardHeader, Grid, Typography } from "@mui/material";
 import ClearIcon from '@mui/icons-material/Clear';
 import LaunchIcon from '@mui/icons-material/Launch';
 import NextPlanIcon from '@mui/icons-material/NextPlan';
 import TicketButton from "./ticket_button";
 
-const Ticket: NextPage = (props: {ticket: TicketData, onNext: any, onRemove: any}) => 
+const Ticket = (props: {ticket: TicketData, onNext: any, onRemove: any}) => 
     <Box sx={{ width: 600, height: 400 }}>
         <Card variant="outlined">
             <CardHeader

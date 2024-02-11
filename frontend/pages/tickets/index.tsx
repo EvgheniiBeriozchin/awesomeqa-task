@@ -42,12 +42,10 @@ const Tickets: NextPage = () => {
         }).then(
             () => 
             {
-                tickets.splice(activeIndex, 1);
-                setTickets(tickets);
-                if (activeIndex == tickets.length)
-                {
-                    setActiveIndex(0);
-                }
+                const updatedTickets = [...tickets];
+                updatedTickets.splice(activeIndex, 1);
+                setTickets(updatedTickets);
+                setActiveIndex(activeIndex == tickets.length ? 0 : activeIndex);
             }
         ).catch(
             () => console.log("Could not delete data")
@@ -56,7 +54,7 @@ const Tickets: NextPage = () => {
 
     const onOpenTicket = (index: number) => {
         setShowTicketList(0); 
-        setActiveIndex(index)
+        setActiveIndex(index);
     };
 
     return (
